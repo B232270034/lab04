@@ -20,11 +20,8 @@ public class GradeCalculatorTest {
     @Test
     @DisplayName("90 оноо яг A дүн байх ёстой (хязгаарын тохиолдол)")
     void ninetyIsExactlyA() {
-        // Arrange
         double score = 90.0;
-        // Act
         String result = calculator.letterGrade(score);
-        // Assert
         assertEquals("A", result);
     }
 
@@ -101,5 +98,4 @@ public class GradeCalculatorTest {
     void totalScoreInvalidParameterized(double att, double lab, double q1, double q2, double exam) {
         assertThrows(IllegalArgumentException.class, () -> calculator.totalScore(att, lab, q1, q2, exam));
     }
-}
 }
